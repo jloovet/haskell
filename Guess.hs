@@ -1,4 +1,5 @@
 import System.Random
+import System.IO
 
 main :: IO ()
 main = do
@@ -9,6 +10,7 @@ main = do
 runGame :: Int -> Int -> IO ()
 runGame number tries = do
     putStr "Enter a number "
+    hFlush stdout
     let t = tries + 1
     x <- getLine
     --cast via read and :: 
